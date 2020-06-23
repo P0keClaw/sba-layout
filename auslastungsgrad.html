@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- META -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+        <!-- TITLE -->
+        <title>Stellenbedarfsanalyse - Auslastungsgrad</title>
+
+        <!-- CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet" />
+        <link href="css/main.css" rel="stylesheet" />
+
+        <!-- JS -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="https://kit.fontawesome.com/36bef00149.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="index.html">Stellenbedarfsanalyse - Auslastungsgrad</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link" href="start.html">Start</a>
+                    <a class="nav-item nav-link" href="my-projects.html">Meine Projekte</a>
+                    <a class="nav-item nav-link" href="new-project.html">Neues Projekt anlegen</a>
+                    <a class="nav-item nav-link" href="projectlist.html">Projektliste</a>
+                </div>
+            </div>
+        </nav>
+
+        <header>
+            <div class="jumbotron">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-10">
+                            <h1>Stellenbedarfsanalyse</h1>
+                            <p>Stadtinternes Tool zur Ermittlung des Auslastungsgrades in LSA-Bauprojekten im Sachgebiet 36.42</p>
+                        </div>
+
+                        <div class="head-logo col-sm-2 col-12">
+                            <img class="img-fluid" src="images/Stadtwappen.png" width="100px" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <nav class="user-bar">
+            <span>Eingeloggt als: </span>
+            <a href="#">@User.Identity.Name!</a>
+        </nav>
+
+        <main>
+            <section id="new-project">
+                <div class="container">
+                    <div class="row mb-4">
+                        <div class="col-11">
+                            <h2>Auslastungsgrad 36.42</h2>
+                        </div>
+
+                        <div class="col-1 flex-element justify-content-end">
+                            <button class="btn btn"><i class="fas fa-print"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="form-group">
+                                <a href="jahresarbeitsminuten.html"><button class="btn btn-sm btn-custom1">Ermittlung Jahresarbeitsminuten</button></a>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <p>Organisationseinheit 36.42</p>
+                        </div>
+
+                        <div class="col-12">
+                            <p><b>Ermittlung des Auslastungsgrades</b></p>
+                        </div>
+
+                        <div class="col-6">
+                            <p>Nettojahresarbeitsminuten je VZÄ (VZÄ = Vollzeitäquivalent)</p>
+                        </div>
+
+                        <div class="col-2">
+                            <input class="form-control form-control-sm" type="text" value="82,428"/>
+                        </div>
+
+                        <div class="offset-3 col-1">
+                            <p>Min/Jahr</p>
+                        </div>
+
+                        <div class="col-6">
+                            <p>Anzahl Planstellen 01</p>
+                        </div>
+
+                        <div class="col-2">
+                            <input class="form-control form-control-sm" type="text" value="5"/>
+                        </div>
+
+                        <div class="offset-1 col-2">
+                            <input class="form-control form-control-sm" type="text" value="82,428" disabled/>
+                        </div>
+
+                        <div class="col-1">
+                            <p>Min/Jahr</p>
+                        </div>
+
+                        <div class="col-6">
+                            <p>Zeitanteil für Sachbearbeitung SGL 36.42</p>
+                        </div>
+
+                        <div class="col-2">
+                            <input class="form-control form-control-sm" type="text" value="10"/>
+                        </div>
+
+                        <div class="col-1">
+                            <p>%</p>
+                        </div>
+
+                        <div class="col-2">
+                            <input class="form-control form-control-sm" type="text" value="82,428" disabled/>
+                        </div>
+
+                        <div class="col-1">
+                            <p>Min/Jahr</p>
+                        </div>
+
+                        <div class="col-6">
+                            <p>Zeitanteil für Sachbearbeitung SRL 36.42.1</p>
+                        </div>
+
+                        <div class="col-2">
+                            <input class="form-control form-control-sm" type="text" value="25"/>
+                        </div>
+
+                        <div class="col-1">
+                            <p>%</p>
+                        </div>
+
+                        <div class="col-2">
+                            <input class="form-control form-control-sm" type="text" value="82,428" disabled/>
+                        </div>
+
+                        <div class="col-1">
+                            <p>Min/Jahr</p>
+                        </div>
+
+                        <div class="col-6">
+                            <p>Zeitanteil für Sachbearbeitung SRL 36.42.2</p>
+                        </div>
+
+                        <div class="col-2">
+                            <input class="form-control form-control-sm" type="text" value="20"/>
+                        </div>
+
+                        <div class="col-1">
+                            <p>%</p>
+                        </div>
+
+                        <div class="col-2">
+                            <input class="form-control form-control-sm" type="text" value="82,428" disabled/>
+                        </div>
+
+                        <div class="col-1">
+                            <p>Min/Jahr</p>
+                        </div>
+
+                        <div class="col-6">
+                            <p>Anzahl Stellen 8 außerhalb des Stellenplans</p>
+                        </div>
+
+                        <div class="col-2">
+                            <input class="form-control form-control-sm" type="text" value="1" />
+                        </div>
+
+                        <div class="offset-1 col-2">
+                            <input class="form-control form-control-sm" type="text" value="82,428" disabled/>
+                        </div>
+
+                        <div class="col-1">
+                            <p>Min/Jahr</p>
+                        </div>
+
+                        <div class="col-6">
+                            <p>Anzahl Stellen 9 außerhalb des Stellenplans</p>
+                        </div>
+
+                        <div class="col-2">
+                            <input class="form-control form-control-sm" type="text" value="1" />
+                        </div>
+
+                        <div class="offset-1 col-2">
+                            <input class="form-control form-control-sm" type="text" value="82,428" disabled/>
+                        </div>
+
+                        <div class="col-1">
+                            <p>Min/Jahr</p>
+                        </div>
+
+                        <div class="col-6">
+                            <p>Anzahl Stellen 11 außerhalb des Stellenplans</p>
+                        </div>
+
+                        <div class="col-2">
+                            <input class="form-control form-control-sm" type="text" value="3" />
+                        </div>
+
+                        <div class="offset-1 col-2">
+                            <input class="form-control form-control-sm" type="text" value="82,428" disabled/>
+                        </div>
+
+                        <div class="col-1">
+                            <p>Min/Jahr</p>
+                        </div>
+
+                        <div class="col-6">
+                            <p>Anzahl Stellen 2 außerhalb des Stellenplans</p>
+                        </div>
+
+                        <div class="col-2">
+                            <input class="form-control form-control-sm" type="text" value="1" />
+                        </div>
+
+                        <div class="offset-1 col-2">
+                            <input class="form-control form-control-sm" type="text" value="82,428" disabled/>
+                        </div>
+
+                        <div class="col-1">
+                            <p>Min/Jahr</p>
+                        </div>
+
+                        <div class="col-6">
+                            <p>Anzahl Stellen 3 außerhalb des Stellenplans</p>
+                        </div>
+
+                        <div class="col-2">
+                            <input class="form-control form-control-sm" type="text" value="1" />
+                        </div>
+
+                        <div class="offset-1 col-2">
+                            <input class="form-control form-control-sm" type="text" value="82,428" disabled/>
+                        </div>
+
+                        <div class="col-1">
+                            <p>Min/Jahr</p>
+                        </div>
+
+                        <div class="col-6">
+                            <p>Anzahl Stellen 5 außerhalb des Stellenplans</p>
+                        </div>
+
+                        <div class="col-2">
+                            <input class="form-control form-control-sm" type="text" value="1" />
+                        </div>
+
+                        <div class="offset-1 col-2">
+                            <input class="form-control form-control-sm" type="text" value="82,428" disabled/>
+                        </div>
+
+                        <div class="col-1">
+                            <p>Min/Jahr</p>
+                        </div>
+
+                        <div class="col-6">
+                            <p>Anzahl Stellen 6 außerhalb des Stellenplans</p>
+                        </div>
+
+                        <div class="col-2">
+                            <input class="form-control form-control-sm" type="text" value="1" />
+                        </div>
+
+                        <div class="offset-1 col-2">
+                            <input class="form-control form-control-sm" type="text" value="82,428" disabled/>
+                        </div>
+
+                        <div class="col-1">
+                            <p>Min/Jahr</p>
+                        </div>
+
+                        <div class="col-12">
+                            <hr />
+                        </div>
+
+                        <div class="col-6">
+                            <p>Summe der Nettojahresarbeitsminuten der Org.-Einheit für Bauprojekte aller Art gemäß Stellenplan für das Jahr</p>
+                        </div>
+
+                        <div class="offset-3 col-2">
+                            <input class="form-control form-control-sm" type="text" value="82,428" disabled/>
+                        </div>
+
+                        <div class="col-1">
+                            <p>Min/Jahr</p>
+                        </div>
+
+                        <div class="col-6">
+                            <p>zuzüglich Mehrstunden Gleitzeitkonto der Org.-Einheit</p>
+                        </div>
+
+                        <div class="col-2">
+                            <input class="form-control form-control-sm" type="text" value="1" />
+                        </div>
+                        
+                        <div class="col-1">
+                            <p>Stunden</p>
+                        </div>
+
+                        <div class="col-2">
+                            <input class="form-control form-control-sm" type="text" value="82,428" disabled/>
+                        </div>
+
+                        <div class="col-1">
+                            <p>Min/Jahr</p>
+                        </div>
+
+                        <div class="col-6">
+                            <p>zuzüglich Überstunden der Org.-Einheit</p>
+                        </div>
+
+                        <div class="col-2">
+                            <input class="form-control form-control-sm" type="text" value="1" />
+                        </div>
+                        
+                        <div class="col-1">
+                            <p>Stunden</p>
+                        </div>
+
+                        <div class="col-2">
+                            <input class="form-control form-control-sm" type="text" value="82,428" disabled/>
+                        </div>
+
+                        <div class="col-1">
+                            <p>Min/Jahr</p>
+                        </div>
+
+                        <div class="col-6">
+                            <p>zuzüglich nicht genommene Urlaubstage der Org.-Einheit</p>
+                        </div>
+
+                        <div class="col-2">
+                            <input class="form-control form-control-sm" type="text" value="1" />
+                        </div>
+                        
+                        <div class="col-1">
+                            <p>Tage</p>
+                        </div>
+
+                        <div class="col-2">
+                            <input class="form-control form-control-sm" type="text" value="82,428" disabled/>
+                        </div>
+
+                        <div class="col-1">
+                            <p>Min/Jahr</p>
+                        </div>
+
+                        <div class="col-12">
+                            <hr />
+                        </div>
+
+                        <div class="col-6">
+                            <p>Summe der Nettojahresarbeitsminuten der Org.-Einheit für Bauprojekte aller Art inklusive Mehr-/Überstunden und Resturlaub</p>
+                        </div>
+
+                        <div class="offset-3 col-2">
+                            <input class="form-control form-control-sm" type="text" value="82,428" disabled/>
+                        </div>
+
+                        <div class="col-1">
+                            <p>Min/Jahr</p>
+                        </div>
+
+                        <div class="col-6">
+                            <p>abzüglich Anzahl der Stellen, die keine LSA-Projekte bearbeiten</p>
+                        </div>
+
+                        <div class="col-2">
+                            <input class="form-control form-control-sm" type="text" value="1" />
+                        </div>
+
+                        <div class="offset-1 col-2">
+                            <input class="form-control form-control-sm" type="text" value="82,428" disabled/>
+                        </div>
+
+                        <div class="col-1">
+                            <p>Min/Jahr</p>
+                        </div>
+
+                        <div class="col-6">
+                            <p>abzüglich Anzahl der Stellen, die im ausgewählten Jahr unbesetzt waren</p>
+                        </div>
+
+                        <div class="col-2">
+                            <input class="form-control form-control-sm" type="text" value="1" />
+                        </div>
+
+                        <div class="offset-1 col-2">
+                            <input class="form-control form-control-sm" type="text" value="82,428" disabled/>
+                        </div>
+
+                        <div class="col-1">
+                            <p>Min/Jahr</p>
+                        </div>
+
+                        <div class="col-6">
+                            <p>abzüglich Anzahl der Stellen für Langzeiterkrankte</p>
+                        </div>
+
+                        <div class="col-2">
+                            <input class="form-control form-control-sm" type="text" value="1" />
+                        </div>
+
+                        <div class="offset-1 col-2">
+                            <input class="form-control form-control-sm" type="text" value="82,428" disabled/>
+                        </div>
+
+                        <div class="col-1">
+                            <p>Min/Jahr</p>
+                        </div>
+
+                        <div class="col-12">
+                            <hr />
+                        </div>
+
+                        <div class="col-6">
+                            <p>Summe der Nettojahresarbeitsminuten der Organisationseinheit für LSA-Bauprojekte</p>
+                        </div>
+
+                        <div class="offset-3 col-2">
+                            <input class="form-control form-control-sm" type="text" value="82,428" disabled/>
+                        </div>
+
+                        <div class="col-1">
+                            <p>Min/Jahr</p>
+                        </div>
+
+                        <div class="col-6">
+                            <p>abzüglich Summe mBZ aller geplanten Projekte im Jahr</p>
+                        </div>
+
+                        <div class="col-2">
+                            <select class="form-control form-control-sm">
+                                <option selected>2020</option>
+                                <option>2019</option>
+                                <option>2018</option>
+                            </select>
+                        </div>
+
+                        <div class="offset-1 col-2">
+                            <input class="form-control form-control-sm" type="text" value="82,428" disabled/>
+                        </div>
+
+                        <div class="col-1">
+                            <p>Min/Jahr</p>
+                        </div>
+
+                        <div class="col-12">
+                            <hr />
+                        </div>
+                    </div>
+
+                    <div class="row projectlist-result">
+                        <div class="col-6">
+                            <p><b>Differenz</b></p>
+                        </div>
+
+                        <div class="offset-3 col-2">
+                            <input class="form-control form-control-sm" type="text" value="82,428" disabled/>
+                        </div>
+
+                        <div class="col-1">
+                            <p>Min/Jahr</p>
+                        </div>
+
+                        <div class="col-6">
+                            <p><b>Dies entspricht</b></p>
+                        </div>
+
+                        <div class="offset-3 col-2">
+                            <input class="form-control form-control-sm" type="text" value="82,428" disabled/>
+                        </div>
+
+                        <div class="col-1">
+                            <p class="text-right">VZÄ</p>
+                        </div>
+                    </div>
+
+                    <div class="row mt-4">
+                        <div class="col-2">
+                            <div class="form-group">
+                                <button class="btn btn-custom2 btn-block">Abbrechen</button>
+                            </div>
+                        </div>
+
+                        <div class="offset-8 col-2">
+                            <div class="form-group">
+                                <button class="btn btn-custom1 btn-block">Speichern</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <span>Stadt Frankfurt &copy; 2020</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- SCRIPTS -->
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    </body>
+</html>

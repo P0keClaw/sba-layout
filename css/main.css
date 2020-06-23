@@ -188,9 +188,29 @@ header + .user-bar a {
 
 /* Section - My Projects */
 
+table {
+    width: 100%;
+}
+
+#my-projects .table thead th:nth-child(1) {
+    width: 10%;
+}
+
+#my-projects .table thead th:nth-child(2) {
+    width: 75%;
+}
+
+#my-projects .table thead th:nth-child(3) {
+    width: 25%;
+}
+
 .table thead th,
 .table tfoot th {
     border: 1px solid #fff;
+}
+
+.table tfoot td {
+    vertical-align: middle;
 }
 
 .project-collapsible {

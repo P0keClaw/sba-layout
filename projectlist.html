@@ -42,7 +42,7 @@
                     <div class="row">
                         <div class="col-10">
                             <h1>Stellenbedarfsanalyse</h1>
-                            <p>Stadtinternes Tool zur Berechnung und Verwaltung von Projekten</p>
+                            <p>Stadtinternes Tool zur Ermittlung des Auslastungsgrades in LSA-Bauprojekten im Sachgebiet 36.42</p>
                         </div>
 
                         <div class="head-logo col-sm-2 col-12">
@@ -65,7 +65,7 @@
                 <div class="container">
                     <div class="row mb-4">
                         <div class="col-md-5">
-                            <h2>Projektliste</h2>
+                            <h2>Kurzübersicht Auslastungsgrad</h2>
                         </div>
 
                         <div class="offset-md-2 col-md-3">
@@ -107,7 +107,7 @@
 
                             <div class="custom-control custom-checkbox">
                                 <input type="checkbox" class="custom-control-input" id="difficulty-normal" checked>
-                                <label class="custom-control-label" for="difficulty-normal">Normal</label>
+                                <label class="custom-control-label" for="difficulty-normal">Mittel</label>
                             </div>
 
                             <div class="custom-control custom-checkbox">
@@ -135,15 +135,15 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="form-group">
-                                <a href="stellenwertbemessung.html"><button class="btn btn-sm btn-custom1">Stellenwertbemessung</button></a>
+                                <a href="auslastungsgrad.html"><button class="btn btn-sm btn-custom1">Detailierte Ansicht des Auslastungsgrades 36.42</button></a>
                             </div>
                         </div>
 
-                        <div class="col-8">
+                        <div class="col-6">
                             <p>Summe der Nettojahresarbeitsminuten der Organisationseinheit für LSA-Bauprojekte</p>
                         </div>
 
-                        <div class="offset-1 col-2">
+                        <div class="offset-3 col-2">
                             <input class="form-control form-control-sm" type="text" value="82,428" disabled/>
                         </div>
 
@@ -174,7 +174,9 @@
                         <div class="col-12">
                             <hr />
                         </div>
+                    </div>
 
+                    <div class="row projectlist-result">
                         <div class="col-6">
                             <p><b>Differenz</b></p>
                         </div>
@@ -186,11 +188,9 @@
                         <div class="col-1">
                             <p>Min/Jahr</p>
                         </div>
-                    </div>
 
-                    <div class="row projectlist-result mb-4">
                         <div class="col-6">
-                            <p><b>Vollbeschäftigtenäquivalent</b></p>
+                            <p><b>Dies entspricht</b></p>
                         </div>
 
                         <div class="offset-3 col-2">
@@ -198,7 +198,13 @@
                         </div>
 
                         <div class="col-1">
-                            <p>VZÄ</p>
+                            <p class="text-right">VZÄ</p>
+                        </div>
+                    </div>
+
+                    <div class="row mb-4 mt-4">
+                        <div class="col-12">
+                            <h2>Projektliste</h2>
                         </div>
                     </div>
 
@@ -210,22 +216,22 @@
                         </div>
                     </div>
 
-                    <!-- PROJEKT 1 -->
+                    <!-- PROJEKTLISTE -->
                     <div class="table table-responsive table-bordered">
                         <table>
                             <thead>
                                 <tr>
-                                    <th scope="col" class="col-2">Zugewiesen an:</th>
-                                    <th scope="col" class="col-3">Projekt:</th>
-                                    <th scope="col" class="col-2">Schwierigkeitsgrad:</th>
-                                    <th scope="col" class="col-5">Projektphase:</th>
-                                    <th scope="col" class="col-1">Ende:</th>
+                                    <th>Zugewiesen an:</th>
+                                    <th>Projekt:</th>
+                                    <th>Schwierigkeitsgrad:</th>
+                                    <th>Projektphase:</th>
+                                    <th>Ende:</th>
                                 </tr>
                             </thead>
     
                             <tbody>
                                 <tr>
-                                    <th scope="row">Mustermann, Max</th>
+                                    <td>Mustermann, Max</td>
                                     <td>GI 7</td>
                                     <td class="easy">Einfach</td>
                                     <td>Entwurfsplanung</td>
@@ -233,15 +239,15 @@
                                 </tr>
 
                                 <tr>
-                                    <th scope="row">Krause, Ralph</th>
+                                    <td>Krause, Ralph</td>
                                     <td>GI 8</td>
-                                    <td class="normal">Normal</td>
+                                    <td class="normal">Mittel</td>
                                     <td>Entwurfsplanung</td>
                                     <td>2019</td>
                                 </tr>
 
                                 <tr>
-                                    <th scope="row">Himmel, Marko</th>
+                                    <td>Himmel, Marko</td>
                                     <td>MÖ 5</td>
                                     <td class="hard">Komplex</td>
                                     <td>Entwurfsplanung</td>
@@ -249,7 +255,7 @@
                                 </tr>
 
                                 <tr>
-                                    <th scope="row">Neudorf, Christine</th>
+                                    <td>Neudorf, Christine</td>
                                     <td>MÖ 4</td>
                                     <td class="hard">Komplex</td>
                                     <td>Genehmigungsplanung</td>
