@@ -1,0 +1,228 @@
+/* BACKGROUNDS */
+
+.bg-1 {
+    background-image: url("../images/ffm-bg.jpeg");
+    background-position: center;
+}
+
+/* COLORS */
+
+.navbar,
+.btn-custom1,
+header + .user-bar,
+#start .card-item span,
+.custom-control-input:checked ~ .custom-control-label::before,
+.navbar,
+table thead,
+table tfoot,
+#projectlist hr {
+    background-color: #cc0000;
+}
+
+.btn-custom2,
+input.form-control:focus,
+select.form-control:focus,
+textarea.form-control:focus,
+button.btn:focus,
+.custom-control-input:checked ~ .custom-control-label::before,
+.custom-control-input:focus ~ .custom-control-label::before,
+#start .card-menu a .card-item:hover {
+    border-color: #cc0000;
+}
+
+input.form-control:focus,
+select.form-control:focus,
+button.btn-custom1:focus,
+button.btn:focus,
+.custom-control-input:focus ~ .custom-control-label::before,
+textarea.form-control:focus,
+.page-link:focus {
+    box-shadow: 0 0 0 .2rem rgba(204, 0, 0,.25);
+}
+
+.btn-custom1:hover,
+.btn-custom2:hover,
+#start .card-item span:hover {
+    background-color: #aa0000;
+}
+
+.btn-custom2,
+#login .login-form {
+    background-color: #fff;
+}
+
+.btn-custom1,
+.btn-custom1:hover,
+.btn-custom2:hover,
+header + .user-bar,
+header + .user-bar a,
+#start .card-item span,
+.btn-custom2:hover > .fas,
+footer,
+table thead,
+table tfoot,
+.project-collapsible a,
+#my-projects .edit,
+table .easy,
+table .normal,
+table .hard {
+    color: #fff;
+}
+
+footer {
+    background-color: #2a2a2e;
+}
+
+.btn-custom2 > .fas,
+.page-link,
+.page-link:hover {
+    color: #cc0000;
+}
+
+/* Header */
+
+.jumbotron {
+    margin-bottom: 0;
+}
+
+header + .user-bar {
+    width: 100%;
+    margin-bottom: 2rem;
+    position: -webkit-sticky;
+    display: flex;
+    justify-content: flex-end;
+}
+
+header + .user-bar,
+header + .user-bar span,
+header + .user-bar a {
+    padding: .5rem 1rem;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.head-logo {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* All Sections */
+
+#start {
+    margin: 7rem;
+}
+
+/* Section - Login */
+
+#login {
+    overflow: hidden;
+}
+
+#login .bg {
+    height: 100vh;
+}
+
+#login .bg img {
+    position: absolute;
+    bottom: 1rem;
+    left: 2rem;
+}
+
+#login .login-form {
+    padding: 7rem;
+}
+
+#login .login-form h2 {
+    margin-bottom: 1rem;
+}
+
+#login .login-form input,
+#login .login-form button {
+    margin: .7rem 0;
+}
+
+/* Section - Start */
+
+#start .card-item {
+    margin: 1rem 0;
+    padding: 1rem;
+    min-height: 22rem;
+    border: 1px solid #d3d3d3;
+    color: #2a2a2e;
+}
+
+#start .card-menu a {
+    text-decoration: none;
+}
+
+#start .card-item h2,
+#start .card-item span {
+    text-align: center;
+}
+
+#start .card-item span {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 1rem;
+    width: calc(100% - 2rem);
+    padding: .5rem;
+    -webkit-transition: background-color .2s;
+    -moz-transition: background-color .2s;
+    -o-transition: background-color .2s;
+    transition: background-color .2s;
+}
+
+/* Section - New Project */
+
+.flex-element {
+    display: flex;
+}
+
+.project-parts {
+    padding-left: 3.5rem;
+}
+
+/* Section - My Projects */
+
+.table thead th,
+.table tfoot th {
+    border: 1px solid #fff;
+}
+
+.project-collapsible {
+    float: right;
+}
+
+table .easy {
+    background-color: #0e5a20;
+}
+
+table .normal {
+    background-color: #867e06;
+}
+
+table .hard {
+    background-color: #c72b2b;
+}
+
+.project-phase-check {
+    float: right;
+}
+
+/* Section - Projectlist */
+
+.projectlist-result {
+    padding: .7rem 0 0 0;
+    border: 1px solid #cc0000;
+    background-color: #ffcece;
+}
+
+/* Footer */
+
+footer .container {
+    padding: 2.5rem 0;
+}

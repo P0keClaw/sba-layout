@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- META -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+        <!-- TITLE -->
+        <title>Stellenbedarfsanalyse - Jahresarbeitsminuten</title>
+
+        <!-- CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet" />
+        <link href="css/main.css" rel="stylesheet" />
+
+        <!-- JS -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="https://kit.fontawesome.com/36bef00149.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="index.html">Stellenbedarfsanalyse - Jahresarbeitsminuten</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link" href="start.html">Start</a>
+                    <a class="nav-item nav-link" href="my-projects.html">Meine Projekte</a>
+                    <a class="nav-item nav-link" href="new-project.html">Neues Projekt anlegen</a>
+                    <a class="nav-item nav-link" href="projectlist.html">Projektliste</a>
+                </div>
+            </div>
+        </nav>
+
+        <header>
+            <div class="jumbotron">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-10">
+                            <h1>Stellenbedarfsanalyse</h1>
+                            <p>Stadtinternes Tool zur Berechnung und Verwaltung von Projekten</p>
+                        </div>
+
+                        <div class="head-logo col-sm-2 col-12">
+                            <img class="img-fluid" src="images/Stadtwappen.png" width="100px" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <nav class="user-bar">
+            <span>Eingeloggt als: </span>
+            <a href="#">@User.Identity.Name!</a>
+        </nav>
+
+        <main>
+            <section id="new-project">
+                <div class="container">
+                    <div class="row mb-4">
+                        <div class="col-11">
+                            <h2>Ermittlung Jahresarbeitsminuten einer Normalkraft</h2>
+                        </div>
+
+                        <div class="col-1 flex-element justify-content-end">
+                            <button class="btn btn"><i class="fas fa-print"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="form-group">
+                                <a href="stellenwertbemessung.html"><button class="btn btn-sm btn-custom1">Stellenwertbemessung</button></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-1">
+                            <p>1</p>
+                        </div>
+
+                        <div class="col-md-5">
+                            <p>Jahrestage</p>
+                        </div>
+
+                        <div class="offset-md-4 col-md-2">
+                            <input type="text" disabled class="form-control form-control-sm" value="365">
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-1">
+                            <p>2</p>
+                        </div>
+
+                        <div class="col-md-5">
+                            <p>abzügliche Samstage</p>
+                        </div>
+
+                        <div class="offset-md-2 col-md-2">
+                            <input type="text" disabled class="form-control form-control-sm" value="52">
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-1">
+                            <p>3</p>
+                        </div>
+
+                        <div class="col-md-5">
+                            <p>abzügliche Sonntage</p>
+                        </div>
+
+                        <div class="offset-md-2 col-md-2">
+                            <input type="text" disabled class="form-control form-control-sm" value="52">
+                        </div>
+                    </div>
+                    
+                    <hr />
+                    
+                    <div class="row">
+                        <div class="col-md-1">
+                            <p>4</p>
+                        </div>
+
+                        <div class="col-md-5">
+                            <p class="font-weight-bold">verbleiben:</p>
+                        </div>
+
+                        <div class="offset-md-4 col-md-2">
+                            <input type="text" disabled class="form-control form-control-sm" value="261">
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-1">
+                            <p>5</p>
+                        </div>
+
+                        <div class="col-md-11">
+                            <p>abzüglich Feiertage</p>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-1">
+                            <p>5.1</p>
+                        </div>
+
+                        <div class="col-md-11">
+                            <p>örtlich berechneter Wert nach folgender Berechnung:</p>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="offset-md-1 col-md-11">
+                            <p class="font-weight-bold">Feiertage, die immer auf einen Wochentag fallen:</p>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="offset-md-1 col-md-5">
+                            <p>Karfreitag</p>
+                        </div>
+
+                        <div class="col-md-1">
+                            <input type="text" disabled class="form-control form-control-sm" value="1">
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="offset-md-1 col-md-5">
+                            <p>Ostermontag</p>
+                        </div>
+
+                        <div class="col-md-1">
+                            <input type="text" disabled class="form-control form-control-sm" value="1">
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="offset-md-1 col-md-5">
+                            <p>Christi Himmelfahrt</p>
+                        </div>
+
+                        <div class="col-md-1">
+                            <input type="text" disabled class="form-control form-control-sm" value="1">
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="offset-md-1 col-md-5">
+                            <p>Pfingsmontag</p>
+                        </div>
+
+                        <div class="col-md-1">
+                            <input type="text" disabled class="form-control form-control-sm" value="1">
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="offset-md-1 col-md-5">
+                            <p>Fronleichnam</p>
+                        </div>
+
+                        <div class="col-md-1">
+                            <input type="text" disabled class="form-control form-control-sm" value="1">
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="offset-md-1 col-md-5">
+                            <p>örtliche Feiertage (z.B. Wäldchestag)</p>
+                        </div>
+
+                        <div class="col-md-1">
+                            <input type="text" disabled class="form-control form-control-sm" value="0,5">
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="offset-md-1 col-md-5">
+                            <p class="font-weight-bold">Summe</p>
+                        </div>
+
+                        <div class="col-md-1">
+                            <input type="text" disabled class="form-control form-control-sm" value="5,5">
+                        </div>
+
+                        <div class="col-md-1">
+                            <p>x 1,0 =</p>
+                        </div>
+
+                        <div class="col-md-2">
+                            <input type="text" disabled class="form-control form-control-sm" value="5,5">
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-1">
+                            <p>5.2</p>
+                        </div>
+
+                        <div class="col-md-11">
+                            <p class="font-weight-bold">Feiertage, die auf einen Wochentag fallen können:</p>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="offset-md-1 col-md-5">
+                            <p>Neujahrstag</p>
+                        </div>
+
+                        <div class="col-md-1">
+                            <input type="text" disabled class="form-control form-control-sm" value="1">
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="offset-md-1 col-md-5">
+                            <p>Tag der Arbeit</p>
+                        </div>
+
+                        <div class="col-md-1">
+                            <input type="text" disabled class="form-control form-control-sm" value="1">
+                        </div>
+                    </div>
+                                        
+                    <div class="row">
+                        <div class="offset-md-1 col-md-5">
+                            <p>Tag der Deutschen Einheit</p>
+                        </div>
+
+                        <div class="col-md-1">
+                            <input type="text" disabled class="form-control form-control-sm" value="1">
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="offset-md-1 col-md-5">
+                            <p>1. Weihnachtsfeiertag</p>
+                        </div>
+
+                        <div class="col-md-1">
+                            <input type="text" disabled class="form-control form-control-sm" value="1">
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="offset-md-1 col-md-5">
+                            <p>2. Weihnachtsfeiertag</p>
+                        </div>
+
+                        <div class="col-md-1">
+                            <input type="text" disabled class="form-control form-control-sm" value="1">
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="offset-md-1 col-md-5">
+                            <p class="font-weight-bold">Summe</p>
+                        </div>
+
+                        <div class="col-md-1">
+                            <input type="text" disabled class="form-control form-control-sm" value="5">
+                        </div>
+
+                        <div class="col-md-1">
+                            <p>/ 7 x 5 =</p>
+                        </div>
+
+                        <div class="col-md-2">
+                            <input type="text" disabled class="form-control form-control-sm" value="3,6">
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-1">
+                            <p>5.3</p>
+                        </div>
+
+                        <div class="col-md-11">
+                            <p class="font-weight-bold">sonstige ggf. arbeitsfreie Tage, die auch auf einen Wochentag fallen können:</p>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="offset-md-1 col-md-5">
+                            <p>Heiligabend (24.12.)</p>
+                        </div>
+
+                        <div class="col-md-1">
+                            <input type="text" disabled class="form-control form-control-sm" value="1">
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="offset-md-1 col-md-5">
+                            <p>Silvester</p>
+                        </div>
+
+                        <div class="col-md-1">
+                            <input type="text" disabled class="form-control form-control-sm" value="1">
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="offset-md-1 col-md-5">
+                            <p>sonstige (z.B. Brauchtumstag)</p>
+                        </div>
+
+                        <div class="col-md-1">
+                            <input type="text" disabled class="form-control form-control-sm" value="0">
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="offset-md-1 col-md-5">
+                            <p class="font-weight-bold">Summe</p>
+                        </div>
+
+                        <div class="col-md-1">
+                            <input type="text" disabled class="form-control form-control-sm" value="2">
+                        </div>
+
+                        <div class="col-md-1">
+                            <p>/ 7 x 5 =</p>
+                        </div>
+
+                        <div class="col-md-2">
+                            <input type="text" disabled class="form-control form-control-sm" value="1,4">
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-1">
+                            <p>5.4</p>
+                        </div>
+
+                        <div class="col-md-5">
+                            <p class="font-weight-bold">Summe aus Ziffer 5.1 bis 5.3</p>
+                        </div>
+
+                        <div class="offset-md-2 col-md-2">
+                            <input type="text" disabled class="form-control form-control-sm" value="10,5">
+                        </div>
+                    </div>
+                    
+                    <hr />
+                    
+                    <div class="row">
+                        <div class="col-md-1">
+                            <p>6</p>
+                        </div>
+
+                        <div class="col-md-5">
+                            <p class="font-weight-bold">verbleiben (Ziffer 4 abzüglich Ziffer 5.4)</p>
+                        </div>
+
+                        <div class="offset-md-4 col-md-2">
+                            <input type="text" disabled class="form-control form-control-sm" value="250,5">
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-1">
+                            <p>7</p>
+                        </div>
+                        
+                        <div class="col-md-11">
+                            <p class="font-weight-bold">Ausfalltage durch Erkrankung, Kuren, etc.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-1">
+                            <p>7.1</p>
+                        </div>
+
+                        <div class="col-md-6">
+                            <select class="form-control form-control-sm">
+                                <option selected>Richtwert KGSt</option>
+                                <option>örtlich ermittelter Wert</option>
+                            </select>
+                        </div>
+
+                        <div class="offset-md-1 col-md-2">
+                            <input type="text" class="form-control form-control-sm" value="">
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-1">
+                            <p>7.2</p>
+                        </div>
+
+                        <div class="col-md-6">
+                            <p class="font-weight-bold">verbleiben entweder Ziffer 6 abzüglich Ziffer 7.1</p>
+                        </div>
+
+                        <div class="offset-md-3 col-md-2">
+                            <input type="text" disabled class="form-control form-control-sm" value="234,0">
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-1">
+                            <p>8</p>
+                        </div>
+
+                        <div class="col-md-11">
+                            <p class="font-weight-bold">Ausfalltage durch Urlaub und ganztägige Dienstbefreiungen/FoBi</p>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-1">
+                            <p>8.1</p>
+                        </div>
+
+                        <div class="col-md-6">
+                            <select class="form-control form-control-sm">
+                                <option selected>Richtwert KGSt</option>
+                                <option>örtlich ermittelter Wert</option>
+                            </select>
+                        </div>
+
+                        <div class="offset-md-1 col-md-2">
+                            <input type="text" class="form-control form-control-sm" value="">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-1">
+                            <p>8.2</p>
+                        </div>
+
+                        <div class="col-md-6">
+                            <p>Fortbildungen</p>
+                        </div>
+
+                        <div class="offset-md-1 col-md-2">
+                            <input type="text" class="form-control form-control-sm" value="">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-1">
+                            <p>8.3</p>
+                        </div>
+
+                        <div class="col-md-6">
+                            <p>Urlaub</p>
+                        </div>
+
+                        <div class="offset-md-1 col-md-2">
+                            <input type="text" class="form-control form-control-sm" value="">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-1">
+                            <p>8.4</p>
+                        </div>
+
+                        <div class="col-md-6">
+                            <p>Dienstbefreiungen/Bildungsurlaub</p>
+                        </div>
+
+                        <div class="offset-md-1 col-md-2">
+                            <input type="text" class="form-control form-control-sm" value="">
+                        </div>
+                    </div>
+                    
+                    <hr />
+                    
+                    <div class="row">
+                        <div class="col-md-1">
+                            <p>9</p>
+                        </div>
+
+                        <div class="col-md-6">
+                            <p class="font-weight-bold">Nettoarbeitszeit entweder 7.3 abzüglich Ziffer 8.1 oder Ziffer 8.2</p>
+                        </div>
+
+                        <div class="offset-md-3 col-md-2">
+                            <input type="text" disabled class="form-control form-control-sm" value="199,9">
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-1">
+                            <p>10</p>
+                        </div>
+
+                        <div class="col-md-5">
+                            <p class="font-weight-bold">Jahresarbeitsminuten (Ergebnis Ziffer 9)</p>
+                        </div>
+
+                        <div class="col-md-1">
+                            <input type="text" disabled class="form-control form-control-sm" value="199,9">
+                        </div>
+
+                        <div class="col-md-1">
+                            <input type="text" disabled class="form-control form-control-sm" value="474,0">
+                        </div>
+
+                        <div class="col-md-1">
+                            <p>Min/Tag=</p>
+                        </div>
+
+                        <div class="col-md-2">
+                            <input type="text" disabled class="form-control form-control-sm" value="94.748">
+                        </div>
+
+                        <div class="col-md-1">
+                            <p>Min/Jahr</p>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="offset-md-1 col-md-5">
+                            <p>Jahresarbeitsminuten</p>
+                        </div>
+
+                        <div class="offset-md-3 col-md-2">
+                            <input type="text" disabled class="form-control form-control-sm" value="94.748">
+                        </div>
+
+                        <div class="col-md-1">
+                            <p>Min/Jahr</p>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="offset-md-1 col-md-5">
+                            <p>abzüglich sachliche und persönliche Verteilzeiten</p>
+                        </div>
+
+                        <div class="col-md-1">
+                            <input type="text" class="form-control form-control-sm" value="10%">
+                        </div>
+
+                        <div class="offset-md-2 col-md-2">
+                            <input type="text" disabled class="form-control form-control-sm" value="9.475">
+                        </div>
+
+                        <div class="col-md-1">
+                            <p>Min/Jahr</p>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="offset-md-1 col-md-5">
+                            <p>individuell je Aufgabenstellung des Unters.bereichs</p>
+                        </div>
+
+                        <div class="col-md-1">
+                            <input type="text" class="form-control form-control-sm" value="">
+                        </div>
+
+                        <div class="offset-md-2 col-md-2">
+                            <input type="text" disabled class="form-control form-control-sm" value="">
+                        </div>
+
+                        <div class="col-md-1">
+                            <p>Min/Jahr</p>
+                        </div>
+                    </div>
+                    
+                    <hr />
+                    
+                    <div class="row">
+                        <div class="offset-md-1 col-md-5">
+                            <p>bereinigte Nettojahresarbeitsminuten</p>
+                        </div>
+
+                        <div class="offset-md-3 col-md-2">
+                            <input type="text" disabled class="form-control form-control-sm" value="85.273">
+                        </div>
+
+                        <div class="col-md-1">
+                            <p>Min/Jahr</p>
+                        </div>
+                    </div>
+
+                    <div class="row mt-4">
+                        <div class="col-2">
+                            <div class="form-group">
+                                <button class="btn btn-custom2 btn-block">Abbrechen</button>
+                            </div>
+                        </div>
+
+                        <div class="offset-8 col-2">
+                            <div class="form-group">
+                                <button class="btn btn-custom1 btn-block">Speichern</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <span>Stadt Frankfurt &copy; 2020</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- SCRIPTS -->
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    </body>
+</html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- META -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+        <!-- TITLE -->
+        <title>Stellenbedarfsanalyse - Start</title>
+
+        <!-- CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet" />
+        <link href="css/main.css" rel="stylesheet" />
+
+        <!-- JS -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="https://kit.fontawesome.com/36bef00149.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="index.html">Stellenbedarfsanalyse - Projektliste</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link" href="start.html">Start</a>
+                    <a class="nav-item nav-link" href="my-projects.html">Meine Projekte</a>
+                    <a class="nav-item nav-link" href="new-project.html">Neues Projekt anlegen</a>
+                    <a class="nav-item nav-link active" href="projectlist.html">Projektliste</a>
+                </div>
+            </div>
+        </nav>
+
+        <header>
+            <div class="jumbotron">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-10">
+                            <h1>Stellenbedarfsanalyse</h1>
+                            <p>Stadtinternes Tool zur Berechnung und Verwaltung von Projekten</p>
+                        </div>
+
+                        <div class="head-logo col-sm-2 col-12">
+                            <img class="img-fluid" src="images/Stadtwappen.png" width="100px" />
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+        </header>
+
+        <nav class="user-bar">
+            <span>Eingeloggt als: </span>
+            <a href="#">@User.Identity.Name!</a>
+        </nav>
+
+        <main>
+            <section id="projectlist">
+                <div class="container">
+                    <div class="row mb-4">
+                        <div class="col-md-5">
+                            <h2>Projektliste</h2>
+                        </div>
+
+                        <div class="offset-md-2 col-md-3">
+                            <div class="input-group">
+                                <input name="project-phase" class="form-control" type="text" placeholder="Projekt suchen">
+                                <div class="input-group-append">
+                                    <button class="btn btn-custom2"><i class="fas fa-search"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-1">
+                            <div class="form-group">
+                                <button class="btn btn-block btn-custom2" data-toggle="collapse" data-target="#filter">Filter</button>
+                            </div>
+                        </div>
+
+                        <div class="col-md-1 flex-element justify-content-end">
+                            <div class="form-group">
+                                <button class="btn btn"><i class="fas fa-print"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="filter" class="row mb-4 collapse">
+                        <div class="col-12">
+                            <h4>Filter</h4>
+                        </div>
+
+                        <div class="col-2">
+                            <span>Schwierigkeitsgrad:</span>
+                        </div>
+
+                        <div class="col-4">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="difficulty-easy" checked>
+                                <label class="custom-control-label" for="difficulty-easy">Einfach</label>
+                            </div>
+
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="difficulty-normal" checked>
+                                <label class="custom-control-label" for="difficulty-normal">Normal</label>
+                            </div>
+
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="difficulty-hard" checked>
+                                <label class="custom-control-label" for="difficulty-hard">Komplex</label>
+                            </div>
+                        </div>
+
+                        <div class="col-1">
+                            <span>Zeitraum:</span>
+                        </div>
+
+                        <div class="col-4">
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="fiter-time-new" name="filter-time" class="custom-control-input">
+                                <label class="custom-control-label" for="fiter-time-new">Neueste zuerst</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="fiter-time-old" name="filter-time" class="custom-control-input">
+                                <label class="custom-control-label" for="fiter-time-old">Ältere zuerst</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="form-group">
+                                <a href="stellenwertbemessung.html"><button class="btn btn-sm btn-custom1">Stellenwertbemessung</button></a>
+                            </div>
+                        </div>
+
+                        <div class="col-8">
+                            <p>Summe der Nettojahresarbeitsminuten der Organisationseinheit für LSA-Bauprojekte</p>
+                        </div>
+
+                        <div class="offset-1 col-2">
+                            <input class="form-control form-control-sm" type="text" value="82,428" disabled/>
+                        </div>
+
+                        <div class="col-1">
+                            <p>Min/Jahr</p>
+                        </div>
+
+                        <div class="col-6">
+                            <p>abzüglich Summe mBZ aller geplanten Projekte im Jahr</p>
+                        </div>
+
+                        <div class="col-2">
+                            <select class="form-control form-control-sm">
+                                <option selected>2020</option>
+                                <option>2019</option>
+                                <option>2018</option>
+                            </select>
+                        </div>
+
+                        <div class="offset-1 col-2">
+                            <input class="form-control form-control-sm" type="text" value="82,428" disabled/>
+                        </div>
+
+                        <div class="col-1">
+                            <p>Min/Jahr</p>
+                        </div>
+
+                        <div class="col-12">
+                            <hr />
+                        </div>
+
+                        <div class="col-6">
+                            <p><b>Differenz</b></p>
+                        </div>
+
+                        <div class="offset-3 col-2">
+                            <input class="form-control form-control-sm" type="text" value="82,428" disabled/>
+                        </div>
+
+                        <div class="col-1">
+                            <p>Min/Jahr</p>
+                        </div>
+                    </div>
+
+                    <div class="row projectlist-result mb-4">
+                        <div class="col-6">
+                            <p><b>Vollbeschäftigtenäquivalent</b></p>
+                        </div>
+
+                        <div class="offset-3 col-2">
+                            <input class="form-control form-control-sm" type="text" value="82,428" disabled/>
+                        </div>
+
+                        <div class="col-1">
+                            <p>VZÄ</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="form-group">
+                                <a href="new-project.html"><button class="btn btn-custom1"><i class="fas fa-plus"></i> Neues Projekt anlegen</button></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PROJEKT 1 -->
+                    <div class="table table-responsive table-bordered">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="col-2">Zugewiesen an:</th>
+                                    <th scope="col" class="col-3">Projekt:</th>
+                                    <th scope="col" class="col-2">Schwierigkeitsgrad:</th>
+                                    <th scope="col" class="col-5">Projektphase:</th>
+                                    <th scope="col" class="col-1">Ende:</th>
+                                </tr>
+                            </thead>
+    
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Mustermann, Max</th>
+                                    <td>GI 7</td>
+                                    <td class="easy">Einfach</td>
+                                    <td>Entwurfsplanung</td>
+                                    <td>2017</td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">Krause, Ralph</th>
+                                    <td>GI 8</td>
+                                    <td class="normal">Normal</td>
+                                    <td>Entwurfsplanung</td>
+                                    <td>2019</td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">Himmel, Marko</th>
+                                    <td>MÖ 5</td>
+                                    <td class="hard">Komplex</td>
+                                    <td>Entwurfsplanung</td>
+                                    <td>2018</td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">Neudorf, Christine</th>
+                                    <td>MÖ 4</td>
+                                    <td class="hard">Komplex</td>
+                                    <td>Genehmigungsplanung</td>
+                                    <td>2016</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- PROJEKTLISTE -->
+
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">‹</a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                <a class="page-link" href="#">›</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <span>Stadt Frankfurt &copy; 2020</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- SCRIPTS -->
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    </body>
+</html>
