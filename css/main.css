@@ -155,8 +155,16 @@ header + .user-bar a {
     color: #2a2a2e;
 }
 
+#start .card-menu a .card-item.disabled {
+    opacity: .7;
+}
+
 #start .card-menu a {
     text-decoration: none;
+}
+
+#start .card-menu a .card-item.disabled:hover {
+    border-color: #d3d3d3;
 }
 
 #start .card-item h2,
@@ -174,6 +182,14 @@ header + .user-bar a {
     -moz-transition: background-color .2s;
     -o-transition: background-color .2s;
     transition: background-color .2s;
+}
+
+#start .card-item.disabled span {
+    background-color: #909090;
+}
+
+#start .card-item .text-sm {
+    font-size: 1.9rem;
 }
 
 /* Section - New Project */
@@ -239,6 +255,15 @@ table .hard {
     padding: .7rem 0 0 0;
     border: 1px solid #cc0000;
     background-color: #ffcece;
+}
+
+#projectlist .table tbody tr {
+    transition: background-color .2s;
+}
+
+#projectlist .table tbody tr:hover {
+    background-color: #ffcece;
+    cursor: pointer
 }
 
 /* Footer */
